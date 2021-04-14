@@ -1,0 +1,19 @@
+{% extends 'inside_base.html' %}
+{% block body %}
+        <h3><p><center> Select the courses you are intersted in!</center></p></h3>
+        <div class= "container">
+        {%for course in courses%}
+        {% if course.course_price %}
+        <div class="row breadcrumb">
+        <div class="col-lg-8">
+            <b>Course Name : </b>{{course.course_name}}</a></p>
+            <p><b>Course price : </b>₹{{course.course_price}}</p>
+        </div>
+        <div class="col-lg-4">
+            <br><a href="/payment/{{course.course_id}}/" class='btn btn-primary btn-sm' >Buy Now!!</a>
+        </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+{% endblock%}

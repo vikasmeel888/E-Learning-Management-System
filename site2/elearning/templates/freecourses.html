@@ -1,0 +1,24 @@
+{% extends 'inside_base.html' %}
+{% block body %}
+        <h3><p><center> Free Courses Available</center></p></h3>
+        <div class = "container">
+        {%for course in courses%}
+            {%if course.course_free%}
+                <div class="row breadcrumb">
+                <div class="col-lg-8">
+                <b>Course Name : </b>{{course.course_name}}</a></p>
+                <p><b>Course price : </b>₹{{course.course_price}}</p>
+                </div>
+                <div class="col-lg-4">
+                    <br><a href="https://{{course.course_content_link}}" class='btn btn-primary btn-sm' >Start Course</a>
+                </div>
+                <!-- <div class="col-lg-4">
+                    <br><a href="/quiz/{{course.course_id}}" class='btn btn-primary btn-sm' >Take a Quiz</a>
+                </div> -->
+
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        </div>       
+{% endblock%}

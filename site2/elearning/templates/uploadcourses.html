@@ -1,0 +1,17 @@
+{% extends 'inside_base.html' %}
+{% block body %}
+        <h3><p><center> Upload new courses!</center></p></h3>
+        <form action="/uploadcourses/" method="POST">
+            {% csrf_token %}
+            <div class = container>
+                <p>Name of the course : </p>
+                <input type="text" name ="name" class = "form-control"> <br>
+                <p>Price of the course :</p>
+                <input type="number" name="price" class = "form-control"> <br>
+                <p> Link for the course :</p>
+                <input type="text" name="link" class = "form-control"> <br>
+                <button type="submit" class="btn btn-success">Add Course</button>
+            </div>
+        </form>
+        <hr> <hr>
+{% endblock%}

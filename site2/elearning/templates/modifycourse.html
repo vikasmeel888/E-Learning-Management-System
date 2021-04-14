@@ -1,0 +1,20 @@
+{% extends 'inside_base.html' %}
+{% block body %}
+        <p><center><h3>Modify the courses you want!</h3></center></p>
+        <div class = "container">
+            
+       
+        {%for course in courses%}
+        <div class="row breadcrumb">
+        <div class="col-lg-8">
+            <b>Course Name : </b>{{course.course_name}}</a></p>
+            <p><b>Course price : </b>₹{{course.course_price}}</p>
+        </div>
+        <div class="col-lg-4">
+            <br><a href="/deletecourse/{{course.course_id}}" class='btn btn-primary btn-sm' >Delete Course</a>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{%endblock%}
