@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+{% block body %}
+<p><h2><center>CourseRange</center></h2></p>
+<div class="rowpadding padding-32" style="margin:0 -16px">
+    <div class="w3-third margin-bottom first-div">
+        <h3>Login</h3>
+        <form action="/login/" method="post">
+            {% csrf_token %}
+            <br><p>Email ID </p>
+            <input type="email" name="email" class='form-control'><br>
+            <p>Password</p>
+            <input type="password" name="password" class='form-control'><br><br>
+            <input type="submit" value="Login" class='btn btn-danger' >
+            <!-- <script>
+                function func(condition){
+                if(condition=="True"){
+                    alert("Logged in succesfully");
+                }
+                else{
+                    alert("User Doesnt exist")
+                }
+            
+                }
+                func('{{valid}}')
+            </script> -->
+            <!-- <script> 
+                if ( window.history.replaceState ) { 
+                    window.history.replaceState( null, null, window.location.href );
+                }
+            </script>  -->
+        </form>
+    </div>
+    <div class="w3-third margin-bottom second-div">
+        <h3>Not Registered?</h3>
+        <form action="/inst_register/">
+            <input type="submit" value="Register as Instructor" class='btn btn-danger' >
+        </form>   
+        <form action="/learner_register/">
+            <input type="submit" value="Register as Learner" class='btn btn-danger' > 
+        </form> 
+        <p>If you are an Admin, Login directly!</p>
+    </div>
+</div>
+{% endblock%}

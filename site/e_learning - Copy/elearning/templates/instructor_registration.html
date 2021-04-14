@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+        <h2>Welcome to Instructor Registration!</h2>
+        <form action="/inst_register/" method="post"><br>
+            {% csrf_token %}
+            <p>Name</p>
+            <input type="text" name="name" class="form-control"><hr>
+            <p>Email ID</p>
+            <input type="email" name="email" class="form-control"><hr>
+            <p>Password</p>
+            <input type="password" name="password" class="form-control"><hr>
+            <p>Phone No</p>
+            <input type="tel" name="phoneNo" class="form-control" pattern="[0-9]{10}"><hr>
+            <p>Experience</p>
+                <input type="radio" name="experience" value= "Beginner"> Beginner<br>
+                <input type="radio" name="experience" value= "Intermediate">  Intermediate<br>
+                <input type="radio" name="experience" value= "Expert"> Expert<br>
+            <hr>
+            <button type="submit" class="btn btn-success">Register</button>
+        </form>
+{% endblock%}

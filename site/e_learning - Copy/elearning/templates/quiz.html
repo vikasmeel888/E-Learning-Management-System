@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" type= "text/css" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/home.css">
+    </head>   
+    <body>
+        <h3><p><center> All the best! Pick the right answer</center></p></h3>
+        <div class = "container">
+        <div class="row breadcrumb">
+        <div class="col-lg-8">
+        <form action="/quiz/{{courseid}}/" method="POST">
+        {% csrf_token %}
+        <b>Question: </b>{{question.question}}</a></p>
+            <p>Options:</p>
+                <input type="radio" name="answer" value= "A">{{question.option1}}<br>
+                <input type="radio" name="answer" value= "B">{{question.option2}} <br> 
+                <input type="radio" name="answer" value= "C"> {{question.option3}}<br>
+                <input type="radio" name="answer" value= "D"> {{question.option4}}<br>
+            <hr>
+            <!-- <input href ="/quiz/{{courseid}}/" type="button" name="answer" value="Submit"> -->
+            <input type="hidden" name="id" value="{{question.id}}">
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</div>
+    </div>
+    <!-- <script>
+        function func(condition){
+                if(condition == 'true'){
+                    alert("Correct Answer!"+condition);
+                }
+                else{
+                    alert("Wrong Answer!"+condition);
+                }
+            
+                }
+                func('{{correct}}')
+    </script> -->
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'inside_base.html' %}
+{% block body %}
+    <body>
+        <br><br><hr><h3><center>Bill</h2></center><hr>
+    <div class="container">
+        <p> Course Name : {{course.course_name}}</p>
+        <p> Price : {{course.course_price}}</p><hr>
+    
+            <br><center><a href="https://{{course.course_content_link}}" class='btn btn-primary btn-sm' >Start Course</a></center>
+        <hr>
+    </div>
+
+        </body>
+        </html>
+
+{% endblock%}

@@ -1,0 +1,14 @@
+{% extends 'inside_base.html' %}
+{% block body %}
+        <h3><p><center> Courses Available</center></p></h3>
+        <div class = "container">
+        {%for course in courses%}
+        <div class="row breadcrumb">
+        <div class="col-lg-8">
+            <b>Course Name : </b>{{course.course_name}}</a></p>
+            <p><b>Course price : </b>₹{{course.course_price}}</p>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+{%endblock%}

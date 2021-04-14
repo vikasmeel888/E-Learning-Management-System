@@ -1,0 +1,20 @@
+{% extends 'inside_base.html' %}
+{% block body %}
+        <h2><p style="font-family:verdana"><center>Welcome Instructor!</center></p></hr><hr>
+        <div class="container">
+            <div class="container">
+                <img src="https://i.pinimg.com/originals/20/52/61/205261553389b54b75afab7620b283f1.gif" width="200px" height="100px">
+                <a href='/uploadcourses/'>Upload Courses</a><hr>
+            </div>
+            <div class="container">
+                <img src="data:image/png;base64,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" width="200px" height="100px">
+                <a href='/buycourse/'>Learn Courses</a> <hr>
+            </div>
+            <div class="container">
+                <img src="https://thorsweb.azurewebsites.net/wp-content/uploads/2020/01/books.png" width="200px" height="100px">
+                <a href='/modifycourse/'>Modify Courses</a> <hr>
+            </div>
+        </div>
+
+    <marquee><b><i>!!! 50% off on all courses !!! Register soon!!!  </i></b></marquee>
+{%endblock%}
